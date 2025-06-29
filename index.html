@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexis David | Author</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dusty-rose: #d4a5a5;
+      --cream: #f8f5ec;
+      --rose-dark: #b08686;
+      --brown: #4a3f35;
+      --tan: #e6d5c4;
+      --tan2: #d2bfa3;
+    }
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: var(--cream);
+      color: var(--brown);
+    }
+
+    header {
+      background-color: var(--tan);
+      padding: 2rem;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      color: var(--brown);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      margin: 0.5rem 0 0;
+      font-style: italic;
+    }
+
+    nav {
+      background-color: var(--tan2);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--brown);
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .main-content {
+      padding: 3rem 1rem;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .main-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--brown);
+    }
+
+    .main-content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--dusty-rose);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      border: none;
+    }
+
+    .cta-button:hover {
+      background-color: var(--rose-dark);
+      color: white;
+    }
+
+    .contact-section {
+      background-color: #f9f4ef;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--brown);
+    }
+
+    .contact-section form {
+      max-width: 600px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1rem;
+    }
+
+    .contact-section button {
+      padding: 0.75rem;
+      background-color: var(--dusty-rose);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .contact-section button:hover {
+      background-color: var(--rose-dark);
+      color: white;
+    }
+
+    section#about {
+      background-color: #f9f4ef;
+      padding: 3rem 1rem;
+      text-align: center;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    section#about h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--brown);
+    }
+
+    section#about div,
+    section#about ul {
+      color: var(--brown);
+    }
+
+    section#about ul {
+      list-style: none;
+      padding-left: 0;
+      text-align: left;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    section#about li {
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 1.2em;
+    }
+    section#about li::before {
+      content: "•";
+      color: var(--dusty-rose);
+      position: absolute;
+      left: 0;
+      font-size: 1.2em;
+      top: 0;
+    }
+
+    section#books {
+      background-color: var(--cream);
+      padding: 4rem 1rem;
+      text-align: center;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    section#books h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--brown);
+    }
+
+    section#books .book-listing {
+      max-width: 1000px;
+      margin: 2rem auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    section#books .book-card {
+      background-color: #f9f4ef;
+      border: 1px solid #e1dad2;
+      border-radius: 12px;
+      padding: 1.5rem;
+      width: 280px;
+      text-align: left;
+      color: var(--brown);
+    }
+    section#books .book-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    section#books .book-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--brown);
+      margin: 0.5rem 0;
+    }
+    section#books .book-card p {
+      color: var(--brown);
+      font-size: 1rem;
+    }
+    section#books .book-card .genre {
+      font-size: 0.9rem;
+      color: var(--rose-dark);
+      font-style: italic;
+    }
+    section#books .book-card a {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: var(--dusty-rose);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    section#books .book-card a:hover {
+      background-color: var(--rose-dark);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Alexis David</h1>
+    <p>Cozy nights. Hidden magic. Emotional rollercoasters</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#books">Books</a>
+    <a href="#samples">Read</a>
+    <a href="#newsletter">Newsletter</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="main-content">
+    <h2>Welcome to the world of Alexis David</h2>
+    <p>I write stories about young adults navigating love, identity, and the strange convolutions of growing up. If you're looking for a blend of tenderness and suspense, you're in the right place.</p>
+    <a class="cta-button" href="#books">Explore My Books</a>
+  </div>
+
+  <section id="about">
+    <h2>Meet Alexis David</h2>
+    <div style="max-width: 750px; margin: 2rem auto; font-size: 1.1rem; line-height: 1.8;">
+      <p>
+        Hi, I'm <strong>Alexis David</strong> — a writer of cozy chaos and quiet intensity. I write stories for the young adult who stays up late wondering who they are, for the dreamer who believes there's magic hiding in the unremarkable, and for anyone who’s ever felt just a little out of place.
+      </p>
+      <p>
+        My work spans <em>young adult</em>, <em>thrillers</em>, <em>romances</em>, <em>fantasy</em>, <em>literary fiction</em>, and <em>LGBTQ+ fiction</em>. Whether it’s a small-town page-turner unraveling in starlight, or a slow-burn love story between two lost souls, I’m drawn to characters who are figuring things out — imperfectly, beautifully, and often while holding onto secrets.
+      </p>
+      <p>
+        When I’m not writing, you’ll find me thrifting, playing with my cat, or researching random topics at 2 a.m. I believe in change, indestructible friendships, poetry, and characters who break your heart just a little.
+      </p>
+      <p>
+        Thank you for being here. You’re invited to get lost in a story, stay for a while, and maybe find a piece of yourself along the way.
+      </p>
+    </div>
+
+  </section>
+
+  <section id="books">
+    <h2>Books by Alexis David</h2>
+    <div class="book-listing">
+
+      <!-- Book 1 -->
+      <div class="book-card">
+        <img src="images\theothersideofokayfrontcover.png" alt="the other side of okay cover">
+        <h3>the other side of okay</h3>
+        <p class="genre">YA • LGBTQ • Coming-of-Age</p>
+        <p>Two boys run into each other on the streets, become fast friends, and slowly fall in love. But with their pasts intertwined in ways neither expected, their story veers into a relatable, heart-wrenching journey of guilt, identity, and what it means to truly know someone.</p>
+        <a href="book1.html">Read More</a>
+      </div>
+
+      <!-- Book 2 -->
+      <div class="book-card">
+        <img src="book2-cover.jpg" alt="Cover Pending!">
+        <h3>The Cedarwood Eight</h3>
+        <p class="genre">Coming-of-Age • Thriller • LGBTQ</p>
+        <p>As two teenagers fall in love at the Cedarwood Center for Growth and Recovery, they begin to realize that all is not what it seems, and the price of not realizing sooner might be their lives. A lyrical coming-of-age story that delves deep into the world of eating disorder recovery.</p>
+        <a href="book2.html">Read More</a>
+      </div>
+
+      <!-- Book 3 -->
+      <div class="book-card">
+        <img src="book3-cover.jpg" alt="Cover Pending!">
+        <h3>Chasing the Midnight Oil</h3>
+        <p class="genre">Fantasy • LGBTQ • YA</p>
+        <p>Two girls battling destiny and the threat of magic disappearing from their world for good. An evocative fantasy woven with longing and deceit.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="samples" style="background-color:#fff8f2; padding: 4rem 1rem; text-align: center; font-family: 'Quicksand', sans-serif;">
+  <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #4a3f35;">Read My Work</h2>
+  <p style="max-width: 700px; margin: 0 auto 2rem; font-size: 1.1rem; color: #4a3f35;">
+    Explore a selection of stories, excerpts, and moments pulled straight from my writing desk. Whether it’s a fierce flash fiction, a moody monologue, or a chapter that hasn’t quite found its novel yet — you’re welcome to dive in.
+  </p>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 1000px; margin: auto;">
+    <!-- Sample 1 -->
+    <div style="background-color: #f9f4ef; border: 1px solid #e1dad2; border-radius: 12px; padding: 1.5rem; width: 280px; text-align: left;">
+      <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem;">Daemon</h3>
+      <p style="font-size: 0.9rem; color: #7a6a5c;"><em>Short story • Literary Fantasy • Speculative Fiction</em></p>
+      <p>Daemon: An entity that exists in a metaphysical web and becomes a character once they attach themselves to a living author. What happens when one of these daemons goes off script as his author slowly runs out of time to achieve her dreams?</p>
+      <a href="placeholder.html?story=daemon" style="display: inline-block; margin-top: 1rem; background-color: #a67c52; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none;">Read Now</a>
+    </div>
+    <!-- Sample 2 -->
+    <div style="background-color: #f9f4ef; border: 1px solid #e1dad2; border-radius: 12px; padding: 1.5rem; width: 280px; text-align: left;">
+      <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem;">Lady of Whispers</h3>
+      <p style="font-size: 0.9rem; color: #7a6a5c;"><em>Short story • Horror</em></p>
+      <p>Two children walk down a whispering set of steps, sharing stories of a town in which where scary is the status quo.</p>
+      <a href="placeholder.html?story=lady-of-whispers" style="display: inline-block; margin-top: 1rem; background-color: #a67c52; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none;">Read Now</a>
+    </div>
+    <!-- Sample 3 -->
+    <div style="background-color: #f9f4ef; border: 1px solid #e1dad2; border-radius: 12px; padding: 1.5rem; width: 280px; text-align: left;">
+      <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem;">An Excerpt from "the other side of okay"</h3>
+      <p style="font-size: 0.9rem; color: #7a6a5c;"><em>Excerpt • LGBTQ+ • Coming-of-age</em></p>
+      <p>An excerpt from my novel "the other side of okay." A deeply emotional scene where two siblings discus loneliness and losing yourself.</p>
+      <a href="placeholder.html?story=other-side" style="display: inline-block; margin-top: 1rem; background-color: #a67c52; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none;">Read Now</a>
+    </div>
+  </div>
+</section>
+
+ <section id="newsletter" style="background-color:#f9f4ef; padding: 4rem 1rem; text-align: center; font-family: 'Quicksand', sans-serif;">
+  <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #4a3f35;">Stay in Touch</h2>
+  <p style="max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem; color: #4a3f35;">
+    Get cozy updates from my writing desk — book news, behind-the-scenes thoughts, exclusive excerpts, and the occasional interactive post.
+  </p>
+
+  <form action="https://formspree.io/f/mblyqqzo" method="POST" style="max-width: 400px; margin: auto;">
+    <input type="email" name="email" placeholder="Your email address" required
+      style="width: 100%; padding: 0.75rem 1rem; font-size: 1rem; border-radius: 6px; border: 1px solid #d9cfc7; margin-bottom: 1rem; font-family: 'Quicksand', sans-serif;">
+    
+    <button type="submit"
+      style="background-color: #a67c52; color: white; border: none; padding: 0.75rem 1.5rem; font-size: 1rem; border-radius: 6px; cursor: pointer;">
+      Subscribe
+    </button>
+  </form>
+</section> 
+
+  <section id="contact" class="contact-section">
+    <h2>Get in Touch</h2>
+    <form action="https://formspree.io/f/mnnvlvgn" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+</body>
+</html>
