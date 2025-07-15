@@ -13,6 +13,7 @@
       --brown: #4a3f35;
       --tan: #e6d5c4;
       --tan2: #d2bfa3;
+      --amazon-orange: #FF9900;
     }
     body {
       margin: 0;
@@ -65,24 +66,44 @@
       width: 1em;
       margin-left: -1em;
     }
-    .purchase-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin-top: 3rem;
+    .aesthetic-buy-section {
+      background: linear-gradient(90deg, #fff8f2 50%, #f8f5ec 100%);
+      border: 1px solid #e1dad2;
+      border-radius: 14px;
+      padding: 2rem;
+      margin: 3rem auto 2rem auto;
+      box-shadow: 0 4px 24px rgba(212, 165, 165, 0.07);
+      text-align: center;
+      max-width: 600px;
     }
-    .purchase-links a {
-      background-color: var(--dusty-rose);
-      color: white;
-      padding: 0.75rem 1.5rem;
+    .aesthetic-buy-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: var(--rose-dark);
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+    }
+    .aesthetic-buy-section p {
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+      color: var(--brown);
+    }
+    .amazon-link-btn {
+      display: inline-block;
+      background: var(--amazon-orange);
+      color: #232f3e;
+      font-weight: bold;
+      font-size: 1.08rem;
+      padding: 0.85rem 2.1rem;
       border-radius: 8px;
       text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s;
+      box-shadow: 0 2px 12px rgba(255,153,0,0.13);
+      transition: background 0.2s, color 0.2s;
+      border: none;
     }
-    .purchase-links a:hover {
-      background-color: var(--rose-dark);
+    .amazon-link-btn:hover, .amazon-link-btn:focus {
+      background: #f7ca00;
+      color: #111;
     }
     .return-button {
       display: block;
@@ -108,19 +129,15 @@
 <body>
   <div class="container">
     <h1>the other side of okay</h1>
-
     <div class="quote">“She's becoming a constant in the equation of my life. The equation that morphs and erases, fails and is full of holes”</div>
-
     <div class="book-description">
       <p>
         Rylan Bennet is every version of himself that he has ever been, and he hurts for the boy holding the blade. He finds it’s easier to have no one in his corner than someone who might one day turn on him and hurt him, or at least that’s what he tells himself when the world starts to crush him and he has no one there by his side. When he looks at the night sky, he sees the space between every bright object, the vastness that swallows everything whole. But when he meets Dalton McGuire, it is the beginning of something supermassive. 
       </p> 
-
       <p>
         Dalton intimately knows pain, and he’s spent years dancing with ambiguous grief. When his best friend flees this world, and his dad practically follows closely after, Dalton should feel lonely. But he throws himself into relationships to drown out the chaos inside his head. Each boy’s strategy works until it doesn’t, until they collide with each other at great speeds and realize their lives can hold so much more. Will the two boys find something enchanting in the palm of each other’s hands as they find their pasts inexplicably tied together or does fate have something a little more sinister in store for them? 
       </p>  
     </div>
-
     <div class="characters">
       <h2>Meet the Characters</h2>
       <ul>
@@ -129,8 +146,18 @@
         <li><strong>Fiona Bennet:</strong> Rylan’s older sister, fiercely protective and sarcastic as hell. A girl who knows what it means to hurt and is trying to learn what it means to heal.</li>
         <li><strong>Kai Hoffman:</strong> Bold, keen, and probably high. They don't do things halfway.</li>
         <li><strong>Ben:</strong> Rylan's friend. Infinitely loyal, playful, and cares so deeply. Rylan and Ben have drifted apart, but even years cannot erase the bond they have created.</li>
-        <li><strong>Mr.McGuire:</strong> Dalton's dad. He is a grieving and distant children's book illustrator. He has the tendency to hole himself up in his art studio for days on end. Sometimes even weeks.</li>
+        <li><strong>Mr.McGuire:</strong> Dalton's dad. He is grieving and distant children's book illustrator. He has the tendency to hole himself up in art studio for days on end. Sometimes even weeks.</li>
       </ul>
+    </div>
+
+    <!-- Aesthetic Amazon Buy Section -->
+    <div class="aesthetic-buy-section">
+      <h2>Ready to read?</h2>
+      <p>
+        You can get your own copy of <strong>the other side of okay</strong> delivered to your doorstep.<br>
+        Available now on Amazon:
+      </p>
+      <a class="amazon-link-btn" href="https://www.amazon.com/dp/B0FHCYJ8QS" target="_blank" rel="noopener">Buy on Amazon</a>
     </div>
 
     <a class="return-button" href="index.html#books">&larr; Return to Books</a>
